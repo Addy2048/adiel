@@ -15,7 +15,7 @@ export default function Landing() {
       />
       <div className="h-full w-full bg-black/70 absolute top-0 right-0 backdrop-blur-sm flex flex-col justify-center items-center">
         <p className="text-2xl md:text-6xl xl:text-8xl font-bold text-center px-4">
-          Meet Adiel Elifelt Azaliwa
+          Meet Adiel Elifelet Azaliwa
         </p>
         <div className="hidden md:flex flex-row justify-center gap-8 mt-4">
           <Link href={"https://github.com/Addy2048"}>
