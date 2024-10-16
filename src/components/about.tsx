@@ -10,7 +10,7 @@ export default function AboutAdiel() {
           alt=""
           height={5000}
           width={5000}
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover rounded"
         />
       </div>
       <div className="max-w-lg">

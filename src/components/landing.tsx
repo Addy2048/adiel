@@ -62,9 +62,9 @@ export default function Landing() {
           >
             Get Resume
           </a>
-          <button className="border-2 border-white bg-transparent rounded-[40px] px-4 py-2 text-lg md:text-xl font-bold">
+          {/* <button className="border-2 border-white bg-transparent rounded-[40px] px-4 py-2 text-lg md:text-xl font-bold">
             Contact
-          </button>
+          </button> */}
         </div>
       </div>
     </div>
