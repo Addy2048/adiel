@@ -3,7 +3,7 @@ import AdielImg from "../../public/adiel.jpeg";
 
 export default function AboutAdiel() {
   return (
-    <div className="w-full py-16 px-12 flex flex-row justify-center gap-12">
+    <div className="w-full py-16 px-12 flex flex-row justify-center gap-12 flex-wrap">
       <div className="h-80 w-64 pt-2">
         <Image
           src={AdielImg}
@@ -14,7 +14,7 @@ export default function AboutAdiel() {
         />
       </div>
       <div className="max-w-lg">
-        <p className="text-2xl font-bold mb-4">Who is Adiel</p>
+        <p className="text-2xl font-bold mb-4">Who is Adiel?</p>
         <p className="text-lg">
           I am a dedicated and ambitious professional with a unique background
           in both Food Science and Technology (FST) and Computer Engineering.
