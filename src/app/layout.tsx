@@ -1,22 +1,30 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Space_Grotesk, Manrope, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const grotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-grotesk",
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const manrope = Manrope({
+  subsets: ["latin"],
+  variable: "--font-manrope",
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+const jbMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jbmono",
+  weight: ["400", "500"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Adiel E.A",
+  title: "Adiel Elifelet Azaliwa — Full-Stack Developer & IoT Engineer",
   description:
-    "Adiel Elifelet Azaliwa, a versatile full-stack developer and DIT graduate in Computer Engineering. Specializing in website and mobile app development with both code and no-code tools, I also offer expertise in domain management, email hosting, and application hosting. Explore my portfolio to see my work and skills.",
+    "Adiel Elifelet Azaliwa — Chief Technical Officer and full-stack engineer building web, mobile and embedded systems. A versatile DIT Computer Engineering graduate specializing in front-end, back-end, mobile and connected hardware.",
 };
 
 export default function RootLayout({
@@ -27,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${grotesk.variable} ${manrope.variable} ${jbMono.variable} antialiased`}
       >
         {children}
       </body>

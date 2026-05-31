@@ -1,33 +1,56 @@
-import Image from "next/image";
-import AdielImg from "../../public/adiel.jpeg";
+import Reveal from "./reveal";
+import CountUp from "./countup";
 
-export default function AboutAdiel() {
+const STATS = [
+  { to: 6, suffix: "+", label: "TEAMS & CLIENTS" },
+  { to: 4, suffix: "+", label: "YEARS BUILDING" },
+  { to: 2, suffix: "", label: "DISCIPLINES" },
+];
+
+export default function About() {
   return (
-    <div className="w-full py-16 px-12 flex flex-row justify-center gap-12 flex-wrap">
-      <div className="h-80 w-64 pt-2">
-        <Image
-          src={AdielImg}
-          alt=""
-          height={5000}
-          width={5000}
-          className="h-full w-full object-cover rounded"
-        />
+    <section id="about" className="wrap">
+      <Reveal className="section-head">
+        <span className="eyebrow">01 — About</span>
+        <h2>Who is Adiel?</h2>
+      </Reveal>
+      <div className="about-grid">
+        <Reveal as="p" className="about-lead">
+          A hard-working, self-disciplined engineer who solves challenges with{" "}
+          <span className="grad">innovative approaches</span> — reliable and
+          accurate, even under pressure.
+        </Reveal>
+        <div className="about-body">
+          <Reveal as="p">
+            After a diploma in Food Science &amp; Technology, I earned my B.Eng
+            in Computer Engineering at the Dar es Salaam Institute of Technology
+            — pairing scientific rigor with software craft.
+          </Reveal>
+          <Reveal as="p" delay={1}>
+            Today I&apos;m Chief Technical Officer at Digital Appearance Company,
+            where I define technical strategy, lead web and app projects, and own
+            deployment, performance and security end-to-end — all while keeping
+            clients supported and successful.
+          </Reveal>
+          <Reveal as="p" delay={2}>
+            Across full-stack web, mobile and embedded systems, I build reliable,
+            scalable solutions — and I&apos;m at my best on the hands-on problems
+            where software meets the real world.
+          </Reveal>
+          <div className="stats">
+            {STATS.map((s, i) => (
+              <Reveal
+                key={s.label}
+                className="stat"
+                delay={(i + 1) as 1 | 2 | 3}
+              >
+                <CountUp className="num" to={s.to} suffix={s.suffix} />
+                <div className="lbl">{s.label}</div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
       </div>
-      <div className="max-w-lg">
-        <p className="text-2xl font-bold mb-4">Who is Adiel?</p>
-        <p className="text-lg">
-          I am a dedicated and ambitious professional with a unique background
-          in both Food Science and Technology (FST) and Computer Engineering.
-          After earning my diploma in FST, I pursued a degree in Computer
-          Engineering to leverage technology in driving innovation within the
-          food industry. As a skilled full-stack web and mobile app developer, I
-          specialize in both front-end and back-end development. Additionally, I
-          work extensively with embedded systems, using various controllers and
-          sensors for IoT applications. My diverse skill set and passion for
-          technology make me a valuable partner for anyone looking to
-          collaborate on forward-thinking projects in tech and beyond.
-        </p>
-      </div>
-    </div>
+    </section>
   );
 }
