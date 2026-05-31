@@ -19,6 +19,8 @@ type Skill = {
   tags: string[];
 };
 
+// TODO: Fix this skills components to ensure that the actual skills are in a vertical flow and not horizontal for a proper timeline
+
 const SKILLS: Skill[] = [
   {
     Icon: FaCode,
@@ -78,7 +80,7 @@ function SkillCard({ skill, index }: { skill: Skill; index: number }) {
           }
         });
       },
-      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" },
     );
     io.observe(el);
     return () => io.disconnect();
